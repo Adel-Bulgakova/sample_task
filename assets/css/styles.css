@@ -345,11 +345,11 @@
     .filter .tips{
         left: 576px;
     }
-    .filters{
+    #filters{
         width: 576px;
         right: 144px;
     }
-    .filters div{
+    #filters>div div{
         display: inline-block;
         cursor: pointer;
         height: 32px;
@@ -361,13 +361,13 @@
         padding-right: 15px;
         margin-right: 15px;
     }
-    .filters div.selected{
+    #filters>div div.selected{
         display: none;
     }
-    .filters div:last-child{
+    #filters>div div:last-child{
         margin-right: 0;
     }
-    .filters div:hover, div:focus{
+    #filters>div div:hover, div:focus{
         background-color: #fffcf0;
         cursor: pointer;
     }
@@ -532,11 +532,11 @@
         left: 0;
         margin-bottom: 8px;
     }
-    .filters{
+    #filters{
         width: 100%;
         right: 0;
     }
-    .filters div{
+    #filters>div div{
         margin-top: 6px;
     }
     /*------end-content------*/
@@ -565,4 +565,10 @@
         margin-right: 0;
     }
     /*------end-footer------*/
+}
+
+
+
+#todo-list li .edit {
+    display: inline;
 }
