@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="assets/bootstrap-3.3.5/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <!--<link rel="stylesheet" href="todomvc-common/base.css">-->
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -52,7 +53,7 @@
     <div class="container active-filters">
         <p>Таргетирование анкеты по торговым точкам</p>
         <form>
-            <div class="row location">
+            <div class="row" id="location">
 
                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 target-name">Регион:</div>
                 <div class="col-xs-6 col-sm-6 visible-sm visible-xs hidden-md hidden-lg control-panel"><div class="delete-icon">x</div></div>
@@ -93,7 +94,7 @@
                 <div class="hidden-sm hidden-xs col-md-3 col-lg-3 visible-md visible-lg tips">Выберите один или несколько регионов и/или территорий, где будет доступна анкета.</div>
             </div>
 
-            <div class="row status">
+            <div class="row" id="status">
                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 target-name">Статус:</div>
                 <div class="col-xs-6 col-sm-6 visible-sm visible-xs hidden-md hidden-lg control-panel"><div class="delete-icon">x</div></div>
                 <div class="col-xs-12 col-sm-12 visible-sm visible-xs hidden-md hidden-lg tips"></div>
@@ -109,21 +110,18 @@
                 <div class="hidden-sm hidden-xs col-md-3 col-lg-3 visible-md visible-lg tips"></div>
             </div>
 
-            <div class="row type">
+            <div class="row" id="type">
                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 target-name">Тип:</div>
                 <div class="col-xs-6 col-sm-6 visible-sm visible-xs hidden-md hidden-lg control-panel"><div class="delete-icon">x</div></div>
                 <div class="col-xs-12 col-sm-12 visible-sm visible-xs hidden-md hidden-lg tips"></div>
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 targets">
-                    <ul id="myULTags">
-                        <li>Гипермаркет</li>
-                        <li>Магазин</li>
-                    </ul>
+                    <div id="tagApp"></div>
                 </div>
                 <div class="hidden-sm hidden-xs col-md-3 col-lg-3 visible-md visible-lg control-panel"><div class="delete-icon">x</div></div>
                 <div class="hidden-sm hidden-xs col-md-3 col-lg-3 visible-md visible-lg tips"></div>
             </div>
 
-            <div class="row parameter">
+            <div class="row" id="parameter">
                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 target-name">Параметр:</div>
                 <div class="col-xs-6 col-sm-6 visible-sm visible-xs hidden-md hidden-lg control-panel"><div class="delete-icon">x</div></div>
                 <div class="col-xs-12 col-sm-12 visible-sm visible-xs hidden-md hidden-lg tips"></div>
@@ -171,6 +169,7 @@
     </div>
 </footer>
 
-    <script src="js/bundle.js"></script>
+
+<script src="js/bundle.js"></script>
 </body>
 </html>

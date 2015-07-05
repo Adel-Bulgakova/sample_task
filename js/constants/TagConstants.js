@@ -1,5 +1,6 @@
 var keyMirror = require('keymirror');
 
 module.exports = keyMirror({
-  FILTER_DISPLAY: null
+    TAG_CREATE: null,
+    TAG_DESTROY: null
 });

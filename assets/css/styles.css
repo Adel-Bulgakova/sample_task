@@ -189,10 +189,10 @@
         color: #7a7a7a;
         font-size: 0.8em;
     }
-    .location, .status, .type{
+    #location, #status, #type{
         margin-bottom: 20px;
     }
-    .location>.targets>.form{
+    #location>.targets>.form{
         width: 100%;
         height: 385px;
         overflow: auto;
@@ -209,26 +209,26 @@
     .opened{
         display: block;
     }
-    .location li{
+    #location li{
         display: none;
     }
-    .location ul.level1>li{
+    #location ul.level1>li{
         display: block;
     }
-    .location ul{
+    #location ul{
         list-style-type: none;
         -webkit-padding-start: 35px;
         -moz-padding-start: 35px;
     }
-    .location ul:first-child{
+    #location ul:first-child{
         -webkit-padding-start: 10px;
         -moz-padding-start: 10px;
     }
-    ul>li>label>span{
+    #location ul>li>label>span{
          font-family: PTSansRegular;
          border-bottom: 1px dotted #000000;
      }
-    .location .form>ul>li>label>span{
+    #location .form>ul>li>label>span{
         font-family: PTSansBold;
         border-bottom: 1px dotted #000000;
     }
@@ -268,7 +268,7 @@
         background-image: url("../images/icon/opened.png");
         background-size: cover;
     }
-    .status .form select{
+    #status .form select{
         width: 142px;
         border: 1px solid #bababa;
         border-radius: 4px;
@@ -276,14 +276,31 @@
         -moz-box-shadow: inset 0 -10px 10px rgba(0,0,0,0.1);
         box-shadow: inset 0 -10px 10px rgba(0,0,0,0.1);
     }
-    .type ul.tagit{
+
+
+    #tagApp {
         border: 1px solid #bababa;
         background-color: #ffffff;
         -webkit-box-shadow: inset 0 2.5px 2.5px rgba(0,0,0,0.1), 0 1px 1px rgba(0,0,0,0.1);
         -moz-box-shadow: inset 0 2.5px 2.5px rgba(0,0,0,0.1), 0 1px 1px rgba(0,0,0,0.1);
         box-shadow: inset 0 2.5px 2.5px rgba(0,0,0,0.1), 0 1px 1px rgba(0,0,0,0.1);
     }
-    .type ul.tagit li.tagit-choice{
+
+    #tags{
+        overflow: auto;
+    }
+
+    #tag-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+    }
+    #tag-list li {
+        display: inline-block;
+        margin: 2px 0 2px 5px;
+        padding-left: 5px;
+        padding-right: 5px;
         border: 1px solid #bababa;
         background-color: #ffffff;
         border-radius: 4px;
@@ -291,34 +308,35 @@
         -moz-box-shadow: inset 0 10px 10px rgba(0,0,0,0.1);
         box-shadow: inset 0 10px 10px rgba(0,0,0,0.1);
     }
-    .type ul.tagit li.tagit-choice .tagit-label:not(a){
-        color: #000000;
-    }
-    .type .ui-widget{
-        font-size: 1em;
-    }
-    .type ul.tagit li.tagit-choice .tagit-close{
-        left: .4em;
-    }
-    .type ul.tagit li.tagit-choice-editable {
-        padding: 0 0.3em 0 1.2em;
-    }
-    .type ul.tagit li.tagit-new {
-         padding: 0;
-        width: 100px;
-    }
-    .type ul.tagit li.tagit-choice:hover, ul.tagit li.tagit-choice.remove {
-        background-color: #ffffff;
-        border-color: #bababa;
-    }
-    .type ul.tagit li.tagit-choice .tagit-close .text-icon {
+
+    #tag-list li .destroy {
+        outline: none;
         display: inline;
         font-family: PTSansBold;
-        font-size: 1em;
-        line-height: 1em;
         color: #888888;
+        cursor: pointer;
     }
-    .parameter .form select{
+
+    #tag-list li>div>span {
+        white-space: pre-wrap;
+        display: inline;
+    }
+
+    #tag-list li>div>span:first-child {
+        margin-right: 3px;
+    }
+
+    #new-tag {
+        display: inline-block;
+        border: none;
+        width: 100px;
+        margin: 2px 5px 2px 0;
+        outline: none;
+    }
+
+
+
+    #parameter .form select{
         display: inline-block;
         width: 41%;
         margin-right: 2%;
@@ -328,7 +346,7 @@
         -moz-box-shadow: inset 0 -10px 10px rgba(0,0,0,0.1);
         box-shadow: inset 0 -10px 10px rgba(0,0,0,0.1);
     }
-    .parameter .field{
+    #parameter .field{
         display: inline-block;
         width: 57%;
         height: 30px;
@@ -507,21 +525,21 @@
         width: 100%;
         font-family: PTSansItalic;
     }
-    .location>.targets>.form{
+    #location>.targets>.form{
         width: 100%;
         height: 205px;
     }
-    .location .tips{
+    #location .tips{
         margin-bottom: 33px;
     }
-    .status .form select{
+    #status .form select{
         width: 50%;
     }
-    .parameter .form select{
+    #parameter .form select{
         width: 50%;
         margin-right: 2%;
     }
-    .parameter .field{
+    #parameter .field{
         width: 48%;
     }
     .filter{
@@ -569,6 +587,4 @@
 
 
 
-#todo-list li .edit {
-    display: inline;
-}
+
