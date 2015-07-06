@@ -22,23 +22,49 @@ var Filter = React.createClass({
     propTypes: {
         name: ReactPropTypes.string.isRequired
     },
-    getInitialState: function() {
-        return {
-            showFilterContent: false
-        };
-    },
 
-    onClick: function() {
-        this.setState({
-            showFilterContent: true
-        });
-        document.getElementById(this.props.id).className += " active";
+    onClickFilter: function() {
+        var filterName = this.props.id;
+        document.getElementById(filterName).className += " clicked";
+
+        function getElementByAttribute(attr, value, root) {
+            root = root || document.body;
+            if(root.hasAttribute(attr) && root.getAttribute(attr) == value) {
+                return root;
+            }
+            var children = root.children,
+                element;
+            for(var i = children.length; i--; ) {
+                element = getElementByAttribute(attr, value, children[i]);
+                if(element) {
+                    return element;
+                }
+            }
+            return null;
+        }
+        var attr = "filter";
+        var activeFilter = getElementByAttribute(attr, filterName);
+        activeFilter.className += " active";
+
+        var deleteIcon =  document.createElement("div");
+        deleteIcon.innerText = "x";
+        deleteIcon.className = "delete-icon";
+
+        activeFilter.getElementsByClassName("control-panel")[0].appendChild(deleteIcon);
+        activeFilter.getElementsByClassName("control-panel")[1].appendChild(deleteIcon);
+
+        deleteIcon.onclick = function(){
+            activeFilter.className = "row";
+            document.getElementById(filterName).className ="";
+        }
     },
 
     render: function() {
         var filter = this.props.filter;
+
+
         return (
-            <div onClick={this.onClick}>{this.props.name}</div>
+            <div onClick={this.onClickFilter} id={this.props.id}>{this.props.name}</div>
         );
     }
 

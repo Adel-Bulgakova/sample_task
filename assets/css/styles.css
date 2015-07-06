@@ -135,12 +135,13 @@
         padding-top: 15px;
         padding-bottom: 25px;
     }
-    .content .active-filters>form>div{
+    [filter]{
          display: none;
     }
-    .content .active-filters>form>div.active{
+    .active{
         display: block;
     }
+
     .target-name{
         width: 128px;
         margin-right: 24px;
@@ -189,10 +190,10 @@
         color: #7a7a7a;
         font-size: 0.8em;
     }
-    #location, #status, #type{
+    [filter="location"], [filter="status"], [filter="type"]{
         margin-bottom: 20px;
     }
-    #location>.targets>.form{
+    [filter="location"]>.targets>.form{
         width: 100%;
         height: 385px;
         overflow: auto;
@@ -209,30 +210,30 @@
     .opened{
         display: block;
     }
-    #location li{
+    [filter="location"] li{
         display: none;
     }
-    #location ul.level1>li{
+    [filter="location"] ul.level1>li{
         display: block;
     }
-    #location ul{
+    [filter="location"] ul{
         list-style-type: none;
         -webkit-padding-start: 35px;
         -moz-padding-start: 35px;
     }
-    #location ul:first-child{
+    [filter="location"] ul:first-child{
         -webkit-padding-start: 10px;
         -moz-padding-start: 10px;
     }
-    #location ul>li>label>span{
+    [filter="location"] ul>li>label>span{
          font-family: PTSansRegular;
          border-bottom: 1px dotted #000000;
      }
-    #location .form>ul>li>label>span{
+    [filter="location"] .form>ul>li>label>span{
         font-family: PTSansBold;
         border-bottom: 1px dotted #000000;
     }
-    ul.level4>li>label>span{
+    [filter="location"] ul.level4>li>label>span{
         border: none;
     }
     input[type=checkbox]{
@@ -268,7 +269,7 @@
         background-image: url("../images/icon/opened.png");
         background-size: cover;
     }
-    #status .form select{
+    [filter="status"] .form select{
         width: 142px;
         border: 1px solid #bababa;
         border-radius: 4px;
@@ -336,7 +337,7 @@
 
 
 
-    #parameter .form select{
+    [filter="parameter"] .form select{
         display: inline-block;
         width: 41%;
         margin-right: 2%;
@@ -346,7 +347,7 @@
         -moz-box-shadow: inset 0 -10px 10px rgba(0,0,0,0.1);
         box-shadow: inset 0 -10px 10px rgba(0,0,0,0.1);
     }
-    #parameter .field{
+    [filter="parameter"] .field{
         display: inline-block;
         width: 57%;
         height: 30px;
@@ -379,15 +380,16 @@
         padding-right: 15px;
         margin-right: 15px;
     }
-    #filters>div div.selected{
-        display: none;
-    }
+
     #filters>div div:last-child{
         margin-right: 0;
     }
     #filters>div div:hover, div:focus{
         background-color: #fffcf0;
         cursor: pointer;
+    }
+    #filters>div div.clicked{
+        display: none;
     }
     [class^="icon-"], [class*=" icon-"] {
         font-family: icomoon;
@@ -525,21 +527,21 @@
         width: 100%;
         font-family: PTSansItalic;
     }
-    #location>.targets>.form{
+    [filter="location"]>.targets>.form{
         width: 100%;
         height: 205px;
     }
-    #location .tips{
+    [filter="location"] .tips{
         margin-bottom: 33px;
     }
-    #status .form select{
+    [filter="status"] .form select{
         width: 50%;
     }
-    #parameter .form select{
+    [filter="parameter"] .form select{
         width: 50%;
         margin-right: 2%;
     }
-    #parameter .field{
+    [filter="parameter"] .field{
         width: 48%;
     }
     .filter{
