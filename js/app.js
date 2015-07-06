@@ -7,10 +7,10 @@ var ReactPropTypes = React.PropTypes;
 var Filters = React.createClass({
     render: function() {
         var filters = [];
-        filters.push(<Filter  key="1" name="Регион и территория" id="location"/>);
-        filters.push(<Filter  key="2" name="Статус" id="status"/>);
-        filters.push(<Filter  key="3" name="Тип" id="type"/>);
-        filters.push(<Filter  key="4" name="Параметр" id="parameter"/>);
+        filters.push(<Filter  key="1" name="Регион и территория" id="location" spanClass="icon-sphere"/>);
+        filters.push(<Filter  key="2" name="Статус" id="status" spanClass="icon-checkmark"/>);
+        filters.push(<Filter  key="3" name="Тип" id="type" spanClass="icontype"/>);
+        filters.push(<Filter  key="4" name="Параметр" id="parameter" spanClass="icon-star-full"/>);
 
         return (
             <div>{filters}</div>
@@ -20,7 +20,8 @@ var Filters = React.createClass({
 
 var Filter = React.createClass({
     propTypes: {
-        name: ReactPropTypes.string.isRequired
+        name: ReactPropTypes.string.isRequired,
+        spanClass: ReactPropTypes.string.isRequired
     },
 
     onClickFilter: function() {
@@ -62,9 +63,8 @@ var Filter = React.createClass({
     render: function() {
         var filter = this.props.filter;
 
-
         return (
-            <div onClick={this.onClickFilter} id={this.props.id}>{this.props.name}</div>
+            <div onClick={this.onClickFilter} id={this.props.id}><span className={this.props.spanClass}></span>{this.props.name}</div>
         );
     }
 
